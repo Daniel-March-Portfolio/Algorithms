@@ -56,8 +56,12 @@ def test_for_sequence_with_odd_length(sequence: Sequence[int | float], target: i
     [
         [[1, 2, 3], 0, None],
         [[1, 2, 3, 4], 0, None],
-        [[0.1, 0.2, 0.3], 0, None],
-        [[0.1, 0.2, 0.3, 0.4], 0, None],
+        [[1, 2, 3], 5, None],
+        [[1, 2, 3, 4], 5, None],
+        [[0.1, 0.2, 0.3], 0.0, None],
+        [[0.1, 0.2, 0.3, 0.4], 0.0, None],
+        [[0.1, 0.2, 0.3], 0.5, None],
+        [[0.1, 0.2, 0.3, 0.4], 0.5, None],
     ]
 )
 def test_for_sequence_without_target(sequence: Sequence[int | float], target: int | float, output: int | None):
