@@ -15,6 +15,6 @@ def strict_binary_search(array: Sequence[int | float], target: int | float) -> i
         else:
             left = middle + 1
 
-    if array_length != 0 and array[left] == target:
+    if left < array_length and array[left] == target:
         return left
     return None
