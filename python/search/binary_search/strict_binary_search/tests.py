@@ -67,7 +67,7 @@ def test_for_sequence_without_target(sequence: Sequence[int | float], target: in
     assert strict_binary_search(sequence, target) == output
 
 
-def test_for_empty_sequence() -> None:
+def test_for_empty_sequence():
     """
     Checks if the algorithm is working correctly for an empty sequence.
     """

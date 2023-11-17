@@ -24,7 +24,7 @@ from python.search.binary_search.left_binary_search.realization import left_bina
         [[0.1, 0.3, 0.5, 0.7, 0.9, 1.1], 1.1, 5]
     ]
 )
-def test_for_sequence_with_even_length(sequence: Sequence[int], target: int, output: Sequence[int]) -> None:
+def test_for_sequence_with_even_length(sequence: Sequence[int | float], target: int | float, output: int | None):
     """
     Checks if the algorithm is working correctly for an even-length sequence.
     """
@@ -52,7 +52,7 @@ def test_for_sequence_with_even_length(sequence: Sequence[int], target: int, out
         [[0.1, 0.3, 0.5, 0.7, 0.9, 1.1, 1.3], 1.3, 6]
     ]
 )
-def test_for_sequence_with_odd_length(sequence: Sequence[int], target: int, output: Sequence[int]) -> None:
+def test_for_sequence_with_odd_length(sequence: Sequence[int | float], target: int | float, output: int | None):
     """
     Checks if the algorithm is working correctly for an odd-length sequence.
     """
@@ -68,7 +68,7 @@ def test_for_sequence_with_odd_length(sequence: Sequence[int], target: int, outp
         [[1.2, 1.3, 1.4], 1.5, None]
     ]
 )
-def test_for_sequence_without_target(sequence: Sequence[int], target: int, output: Sequence[int]) -> None:
+def test_for_sequence_without_target(sequence: Sequence[int | float], target: int | float, output: int | None):
     """
     Checks if the algorithm is working correctly for sequence that does not contain the target.
 
@@ -87,7 +87,7 @@ def test_for_sequence_without_target(sequence: Sequence[int], target: int, outpu
     assert left_binary_search(sequence, target) == output
 
 
-def test_for_empty_sequence() -> None:
+def test_for_empty_sequence():
     """
     Checks if the algorithm is working correctly for an empty sequence.
     """
