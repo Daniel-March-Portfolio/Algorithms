@@ -27,7 +27,7 @@ def test_if_algorithm_is_not_in_place():
     """
     array = [3, 1.5, 2.5, 3.5, 2, 0, 1]
     control_array = deepcopy(array)
-    assert bubble_sort(array) != array
+    assert id(bubble_sort(array)) != id(array)
     assert array == control_array
 
 

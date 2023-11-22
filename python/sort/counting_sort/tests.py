@@ -27,7 +27,7 @@ def test_if_algorithm_is_not_in_place():
     """
     array = [6, 4, 5, 1, 2, 4, 5, 1, 2, 3, 0, 5, 0, 2, 1, 5]
     control_array = deepcopy(array)
-    assert counting_sort(array) != array
+    assert id(counting_sort(array)) != id(array)
     assert array == control_array
 
 
