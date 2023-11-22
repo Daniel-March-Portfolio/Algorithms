@@ -13,6 +13,3 @@ def counting_sort(array: list[int]) -> list[int]:
     for offsetted_element, count in enumerate(counter):
         result += [offsetted_element + minimal_element] * count
     return result
-
-# 54
-# 43
